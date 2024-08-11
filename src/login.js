@@ -14,7 +14,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Logged in successfully!");
-      navigate("/home.js");
+      navigate("/home");
     } catch (error) {
       alert(error.message);
     }

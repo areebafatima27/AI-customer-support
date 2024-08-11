@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+* {
+  color: black;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Background color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gradient-background {
+  /* background: linear-gradient(to right, #fce0d8, #d7b194); */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient {
+  background: linear-gradient(to right, #fce0d8, #dbd0c7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text {
+  background: rgb(249, 247, 247);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Ensure the box takes up the full width */
+  white-space: pre-wrap; /* Allow text to wrap */
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.textField {
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid black;
+}
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the viewport */
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading {
+  background-color: #fce0d8;
+  padding: 20px;
 }

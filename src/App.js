@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Signup from "./signup";
+import Login from "./login";
+import Navbar from "./navbar";
+import Home from "./home";
+import BackgroundWrapper from "./background"; // Import the BackgroundWrapper component
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/signup"
+          element={
+            <BackgroundWrapper hasBackground={true}>
+              <Navbar />
+              <Signup />
+            </BackgroundWrapper>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <BackgroundWrapper hasBackground={true}>
+              <Navbar />
+              <Login />
+            </BackgroundWrapper>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <BackgroundWrapper hasBackground={false}>
+              <Navbar />
+              <Home />
+            </BackgroundWrapper>
+          }
+        />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
